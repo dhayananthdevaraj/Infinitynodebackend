@@ -5,9 +5,10 @@ const getAllVacationRentals = async (req, res) => {
     const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
+console.log("sortValue",sortValue);
+    const vacationRentals = await VacationRental.find({ title: searchRegex }).sort({ pricePerDay: parseInt(sortValue) });
 
-    const vacationRentals = await VacationRental.find({ title: searchRegex })
-console.log("vacationRentals",vacationRentals);
+// console.log("vacationRentals",valcationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -70,13 +71,13 @@ const deleteVacationRental = async (req, res) => {
 const getVacationRentalsByOwnerId = async (req, res) => {
   try {
     const ownerId  = req.body.ownerId;
-    console.log("Own",ownerId);
+    // console.log("Own",ownerId);
     const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
-    const vacationRentals = await VacationRental.find({ owner: ownerId, title: searchRegex })
-      // .sort({ pricePerNight: parseInt(sortValue) });
-console.log("vacationRentals",vacationRentals);
+    console.log("sortValue",sortValue);
+    const vacationRentals = await VacationRental.find({ owner: ownerId, title: searchRegex }).sort({ pricePerDay: parseInt(sortValue) });
+// console.log("vacationRentals",vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
