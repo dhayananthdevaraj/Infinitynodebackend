@@ -36,7 +36,7 @@ const vacationRentalSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  pricePerNight: {
+  pricePerDay: {
     type: Number,
     required: true
   },
