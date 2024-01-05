@@ -7,8 +7,7 @@ const getAllVacationRentals = async (req, res) => {
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
 
     const vacationRentals = await VacationRental.find({ title: searchRegex })
-      .sort({ pricePerNight: parseInt(sortValue) });
-
+console.log("vacationRentals",vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -33,7 +32,7 @@ const getVacationRentalById = async (req, res) => {
 const addVacationRental = async (req, res) => {
   try {
     const vacationRental = await VacationRental.create(req.body);
-    res.status(201).json({ message: 'Vacation rental added successfully' });
+    res.status(200).json({ message: 'Vacation rental added successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -71,13 +70,14 @@ const deleteVacationRental = async (req, res) => {
 const getVacationRentalsByOwnerId = async (req, res) => {
   try {
     const { ownerId } = req.params;
+    console.log("ownerId",ownerId);
     const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
 
     const vacationRentals = await VacationRental.find({ owner: ownerId, title: searchRegex })
-      .sort({ pricePerNight: parseInt(sortValue) });
-
+      // .sort({ pricePerNight: parseInt(sortValue) });
+console.log("vacationRentals",vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });

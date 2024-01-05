@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 // const bookRoutes = require("./routers/bookRouter");
 const userRouter = require("./routers/userRouter");
 const vacationRentalRouter = require("./routers/vactionRentalRouter");
+const bodyParser = require("body-parser");
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,6 +16,8 @@ const corsOptions = {
   optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type,Authorization",
 };
+app.use(bodyParser.json({ limit: '10mb' })); // Set the limit to 10MB for JSON payloads
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true })); // Set the limit to 10MB for URL-encoded payloads
 
 
 // Enable CORS with the specified options
