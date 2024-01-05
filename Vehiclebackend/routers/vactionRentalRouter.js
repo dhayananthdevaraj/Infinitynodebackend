@@ -9,6 +9,5 @@ router.get("/getVacationRentalById/:id",   vacationRentalController.getVacationR
 router.post("/addVacationRental",   vacationRentalController.addVacationRental);
 router.put("/updateVacationRental/:id",   vacationRentalController.updateVacationRental);
 router.delete("/deleteVacationRental/:id",   vacationRentalController.deleteVacationRental);
-router.get("/getVacationRentalsByOwnerId/:ownerId",   vacationRentalController.getVacationRentalsByOwnerId);
 
 module.exports = router;
