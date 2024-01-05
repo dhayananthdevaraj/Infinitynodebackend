@@ -13,7 +13,7 @@ const validateToken = (req, res, next) => {
     const token = req.header('Authorization');
 
     const decoded = jwt.verify(token, 'asdfghjkl');
-    console.log("decoded",decoded);
+    // console.l  og("decoded",decoded);
     next()
 
   } catch (error) {
