@@ -6,7 +6,7 @@ const getAllVacationRentals = async (req, res) => {
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
 console.log("sortValue",sortValue);
-    const vacationRentals = await VacationRental.find({ title: searchRegex }).sort({ pricePerDay: parseInt(sortValue) });
+    const vacationRentals = await VacationRental.find({ title: searchRegex },"-__v").sort({ pricePerDay: parseInt(sortValue) });
 
 // console.log("vacationRentals",valcationRentals);
     res.status(200).json(vacationRentals);
