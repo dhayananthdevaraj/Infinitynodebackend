@@ -16,8 +16,8 @@ const corsOptions = {
   optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type,Authorization",
 };
-app.use(bodyParser.json({ limit: '10mb' })); // Set the limit to 10MB for JSON payloads
-app.use(bodyParser.urlencoded({ limit: '10mb', extended: true })); // Set the limit to 10MB for URL-encoded payloads
+app.use(bodyParser.json({ limit: '100mb' })); // Set the limit to 10MB for JSON payloads
+app.use(bodyParser.urlencoded({ limit: '100mb', extended: true })); // Set the limit to 10MB for URL-encoded payloads
 
 
 // Enable CORS with the specified options
