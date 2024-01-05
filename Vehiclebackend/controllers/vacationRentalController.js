@@ -69,12 +69,11 @@ const deleteVacationRental = async (req, res) => {
 };
 const getVacationRentalsByOwnerId = async (req, res) => {
   try {
-    const { ownerId } = req.params;
-    console.log("ownerId",ownerId);
+    const ownerId  = req.body.ownerId;
+    console.log("Own",ownerId);
     const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
-
     const vacationRentals = await VacationRental.find({ owner: ownerId, title: searchRegex })
       // .sort({ pricePerNight: parseInt(sortValue) });
 console.log("vacationRentals",vacationRentals);
