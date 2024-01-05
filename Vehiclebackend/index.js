@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 // const bookRoutes = require("./routers/bookRouter");
 const userRouter = require("./routers/userRouter");
-const vehicleRouter = require("./routers/vehicleRouter");
+const vacationRentalRouter = require("./routers/vactionRentalRouter");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -30,5 +30,5 @@ mongoose
     console.log(error);
   });
   app.use("/user", userRouter);
-  app.use("/vehicle", vehicleRouter);
+  app.use("/vacation", vacationRentalRouter);
 
