@@ -3,12 +3,12 @@ const vacationRentalController = require("../controllers/vacationRentalControlle
 const { validateToken } = require("../authUtils");
 const router = express.Router();
 
-router.post("/getAllVacationRentals", validateToken, vacationRentalController.getAllVacationRentals);
-router.post("/getVacationRentalByOwnerId", validateToken, vacationRentalController.getVacationRentalsByOwnerId);
-router.get("/getVacationRentalById/:id", validateToken, vacationRentalController.getVacationRentalById);
-router.post("/addVacationRental", validateToken, vacationRentalController.addVacationRental);
-router.put("/updateVacationRental/:id", validateToken, vacationRentalController.updateVacationRental);
-router.delete("/deleteVacationRental/:id", validateToken, vacationRentalController.deleteVacationRental);
-router.get("/getVacationRentalsByOwnerId/:ownerId", validateToken, vacationRentalController.getVacationRentalsByOwnerId);
+router.post("/getAllVacationRentals",   vacationRentalController.getAllVacationRentals);
+router.post("/getVacationRentalByOwnerId",   vacationRentalController.getVacationRentalsByOwnerId);
+router.get("/getVacationRentalById/:id",   vacationRentalController.getVacationRentalById);
+router.post("/addVacationRental",   vacationRentalController.addVacationRental);
+router.put("/updateVacationRental/:id",   vacationRentalController.updateVacationRental);
+router.delete("/deleteVacationRental/:id",   vacationRentalController.deleteVacationRental);
+router.get("/getVacationRentalsByOwnerId/:ownerId",   vacationRentalController.getVacationRentalsByOwnerId);
 
 module.exports = router;
