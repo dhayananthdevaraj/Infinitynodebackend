@@ -1,0 +1,113 @@
+.additem {
+	background-color: #e6aa0a;
+	color: black;
+}
+/* // h2 {
+//   letter-spacing: 2px;
+// } */
+
+.cardUsers {
+	border: none;
+	box-shadow: 0px 0px 4px lightgray;
+	height: calc(100vh - 130px);
+	position: relative; /* Add this */
+}
+
+.dashboard-table {
+	overflow: hidden;
+	overflow-y: auto;
+}
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 10px;
+}
+
+.search-input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 10px; /* Adjust the margin as needed */
+	flex: 1; /* Take up remaining space */
+	font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Style for the search button */
+.search-button {
+	background-color: #0d6efd;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px; /* Adjust button width as needed */
+	height: 40px; /* Adjust button height as needed */
+}
+
+/* Style for the search icon */
+.search-icon {
+	color: white;
+	font-size: 18px; /* Adjust icon size as needed */
+}
+
+/* Adjust the appearance of the input and button on hover/focus if needed */
+.search-input:hover,
+.search-input:focus {
+	border-color: #0d6efd; /* Change border color on hover/focus */
+}
+
+.search-button:hover {
+	background-color: #0a58ca; /* Change button color on hover */
+}
+
+.pagination-wrapper {
+	position: absolute;
+	bottom: 0;
+	right: 15px; /* Adjust the right positioning as needed */
+	left: 15px; /* Adjust right as needed */
+	padding: 10px; /* Adjust padding as needed */
+}
+/* CSS for the popup */
+.rating-popup {
+	position: absolute;
+	top: 50%; /* Center the popup vertically */
+	left: 50%; /* Center the popup horizontally */
+	transform: translate(-50%, -50%); /* Center the popup perfectly */
+	background-color: white;
+	border: 1px solid #ccc;
+	padding: 50px;
+	z-index: 1000; /* Ensure the popup is on top of other elements */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	height: auto;
+	width: 300px;
+  }
+  
+  /* Add some styles to the table within the popup */
+  .rating-popup table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+  }
+  
+  .rating-popup th, .rating-popup td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+  }
+  
+  .rating-popup th {
+	background-color: #f2f2f2;
+  }
+
+  .rating-popup button{
+	background-color: red;
+	float: right;
+	padding:3px
+  }
+  .ratingButton{
+	padding: 5px;
+	border-radius: 8px;
+  }

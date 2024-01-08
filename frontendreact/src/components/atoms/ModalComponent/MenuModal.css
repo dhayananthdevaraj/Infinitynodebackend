@@ -1,0 +1,11 @@
+.newItemImage {
+	border-radius: 10px;
+	margin-left: 2px;
+}
+
+.selected-image {
+	border: 2px solid #4b240b;
+    border-radius: 10px;
+    margin-left: 2px;
+    box-shadow: 0 0 10px rgba(15, 16, 7, 0.5);
+}

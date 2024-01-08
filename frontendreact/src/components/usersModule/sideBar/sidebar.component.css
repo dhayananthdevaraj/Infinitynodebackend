@@ -1,0 +1,51 @@
+#sidebar {
+	position: fixed;
+	width: 70px;
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 1;
+	transition: all 0.3s;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#sidebar .logo {
+	margin-bottom: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+#sidebar .chair-and-rectangle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#sidebar .round-image {
+	display: flex;
+	justify-content: center;
+	margin-top: auto;
+}
+
+#sidebar .round-image img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+#sidebar .rectangle {
+	transform: scaleX(-1);
+	background-color: #236bae;
+}
+
+@media (max-width: 768px) {
+	#sidebar {
+		left: -70px;
+	}
+}

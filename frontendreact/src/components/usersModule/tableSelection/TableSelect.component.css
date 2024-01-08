@@ -1,0 +1,166 @@
+.table1 img,
+.table10 img {
+	margin-bottom: 4.1rem !important;
+	position: relative;
+}
+
+.table6 img,
+.table7 img,
+.table8 img,
+.table9 img,
+.table13 img,
+.table14 img,
+.table15 img {
+	margin-bottom: 1.54rem;
+	position: relative;
+}
+
+.select-table-card {
+	height: calc(100vh - 100px);
+	border: none;
+	box-shadow: 0px 0px 4px lightgray;
+	/* // margin-bottom: 10px; */
+}
+
+.select-table-card::-webkit-scrollbar,
+.tables::-webkit-scrollbar {
+	display: none;
+}
+
+.flip-card-innerTable {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.flip-card-Table{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	/* Safari */
+	backface-visibility: hidden;
+}
+.card-offer-table {
+	position: absolute;
+	background: #d7006c;
+	left: 0px;
+	top: 0px;
+	color: white;
+	padding: 0px 12px;
+	border-radius: 12px 18px 18px 0px;
+	width: 80px;
+	height: 18px;
+}
+
+.card-offer-table p {
+	font-size: 12px;
+}
+
+.tables {
+	padding-bottom: 20px !important;
+	height: calc(100vh - 30px);
+	overflow: scroll;
+}
+
+.footercard {
+	border: 1px solid #236bae;
+	border-radius: 16px;
+	z-index: 1;
+	position: relative;
+	bottom: 10px;
+}
+
+.tableno {
+	position: absolute;
+	margin-left: 15px;
+	z-index: 1;
+	top: 14px;
+}
+
+.item-price-table {
+	font-size: 16px !important;
+}
+
+.item-name-table {
+	font-size: 16px !important;
+}
+
+.table4 .tableno,
+.table5 .tableno,
+.table6 .tableno,
+.table7 .tableno,
+.table8 .tableno,
+.table9 .tableno,
+.table13 .tableno,
+.table14 .tableno,
+.table15 .tableno,
+.table16 .tableno {
+	margin-left: 20px;
+	top: 10px;
+}
+
+.table-details {
+	position: absolute;
+	z-index: 1;
+	bottom: 80px;
+	margin-left: 12px;
+}
+
+.table4 .table-details,
+.table5 .table-details {
+	bottom: 35px;
+	margin-left: 15px;
+}
+
+.table6 .table-details,
+.table7 .table-details,
+.table8 .table-details,
+.table9 .table-details,
+.table13 .table-details,
+.table14 .table-details,
+.table15 .table-details,
+.table16 .table-details {
+	bottom: 40px;
+	margin-left: 15px;
+}
+
+img {
+	cursor: pointer;
+}
+
+.offerTable {
+	width: 100%;
+	/* // box-shadow: 0px 0px 3px lightgray; */
+	padding: 10px;
+	/* // height: 100vh; */
+	overflow-y: auto;
+	border: none;
+}
+
+.flip-cardTable {
+	padding: 10px;
+	box-shadow: 0px 0px 5px lightgray;
+	border-radius: 12px;
+}
+
+.item-discription {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+	.btn-outline {
+		font-size: 12px;
+		padding: 10px 5px;
+	}
+
+	.btnn {
+		font-size: 12px;
+		padding: 10px 5px;
+	}
+}

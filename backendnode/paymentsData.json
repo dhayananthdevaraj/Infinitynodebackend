@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "paymentMode": "Credit Card",
+    "orderId": 1,
+    "customerId": 2,
+    "email": "john@example.com",
+    "customerName": "John Doe",
+    "paymentDesc": "Payment for order #123",
+    "phNo": "1234567890",
+    "totalPrice": 100.5,
+    "status": "Success"
+  },
+  {
+    "id": 2,
+    "paymentMode": "PayPal",
+    "orderId": 2,
+    "customerId": 2,
+    "email": "alice@example.com",
+    "customerName": "Alice Smith",
+    "paymentDesc": "Payment for order #456",
+    "phNo": "9876543210",
+    "totalPrice": 75.25,
+    "status": "Pending"
+  }
+]

@@ -1,0 +1,14 @@
+ {
+    "data":[
+        {
+        "dishName":"Dahi Puri",
+        "dishDetails":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur! Illum quia distinctio, nulla consectetur aperiam doloribus, facilis minima,  adipisci optio maxime repudiandae? Cum  iusto delectus neque, nobis obcaecati  aperiam!",
+        "dishImg":"../../../assets/food.jpeg",
+        "dishPrice":50,
+        "dishDiscount":20
+        }
+    ]
+        
+}
+    
+

@@ -1,0 +1,116 @@
+.ordercardBilling {
+	height: calc(90vh - 10px);
+	/* // border: 1px solid ; */
+	border-radius: 0.75rem;
+	box-shadow: 0 0 4px #c8c8c8 !important;
+	border: none;
+}
+.ordersHeading {
+	padding: 20px;
+	color: #236bae;
+	/* // border-bottom: 1px solid black; */
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+.innerCard {
+	height: 8.6rem;
+	background-color: #fafafa;
+	padding: 0.7rem 1rem 0.7rem 0.7rem;
+}
+.innerCard:nth-child(odd) {
+	height: 8.6rem;
+	background-color: white;
+	padding: 0.7rem 1rem 0.7rem 0.7rem;
+}
+.dishName {
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 0px;
+	display: flex;
+}
+.orderBillingFlex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.numbercount {
+	justify-content: center;
+	margin-left: 60%;
+	width: 80px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: #d5d5d5;
+	margin-bottom: 10px !important;
+	/* // margin-right: 100px !important; */
+}
+.dishPrice {
+	position: relative;
+	bottom: 1rem;
+	font-weight: 600;
+	font-size: 20;
+	display: flex;
+	justify-content: end;
+	margin-right: 0.5rem !important;
+	margin-top: 20px !important;
+}
+.paymentdetails {
+	bottom: 0px;
+	position: absolute;
+	height: 11rem;
+	width: 100%;
+	background-color: #f8f7f7;
+}
+.paynowBtn {
+	bottom: -40px;
+	position: absolute;
+	width: 100%;
+	border-bottom-left-radius: 0.75rem;
+	border-bottom-right-radius: 0.75rem;
+	background-color: #236bae;
+	color: white;
+	transition: background-color 0.4s;
+}
+.paynowBtn:hover {
+	background-color: #236bae;
+}
+.subtotal {
+	display: flex;
+	justify-content: space-between;
+	margin: 8px 1.5rem;
+}
+.serviceCharge {
+	display: flex;
+	justify-content: space-between;
+	margin: 8px 1.5rem;
+	padding: 8px 0 1rem;
+	border-bottom: 1px dashed #727272;
+}
+.dishDescription {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	font-size: 10px;
+	color: #858585;
+}
+
+.newinner {
+	overflow-y: auto;
+	height: calc(58vh - 10px) !important;
+}
+.previewText {
+	display: flex;
+	justify-content: center;
+	font-size: large;
+	font-weight: 600;
+	color: #236bae;
+	align-items: center;
+}
+
+.minubtn {
+	cursor: pointer;
+	border: none !important;
+}

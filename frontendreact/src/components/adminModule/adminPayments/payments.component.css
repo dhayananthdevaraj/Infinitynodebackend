@@ -1,0 +1,54 @@
+table {
+	width: 100%;
+}
+.additem {
+	background-color: #e6aa0a;
+	color: black;
+}
+.cardPC {
+	height: calc(112vh - 130px);
+}
+.h2PC {
+	letter-spacing: 2px;
+}
+
+.cardPC {
+	border: none;
+	box-shadow: 0px 0px 4px lightgray;
+}
+.dashboard-table {
+	height: calc(10vh - 80px);
+	overflow: hidden;
+	overflow-y: auto;
+}
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 10px;
+}
+
+/* Style for the search container */
+.search-container {
+	display: flex;
+	align-items: center;
+}
+
+/* Style for the search input */
+.search-input {
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-left: 10px;
+	font-size: 16px;
+	outline: none;
+}
+
+.pagination-wrapperPay {
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	left: 15px;
+	padding: 10px;
+}

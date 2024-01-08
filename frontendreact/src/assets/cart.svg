@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_38" data-name="Rectangle 38" width="24" height="24" transform="translate(1216.098 28.098)" fill="#010102" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_15" data-name="Mask Group 15" transform="translate(-1216.098 -28.098)" clip-path="url(#clip-path)">
+    <g id="shopping-cart" transform="translate(1216.297 28)">
+      <path id="Path_384" data-name="Path 384" d="M22.9,4.11a3.017,3.017,0,0,0-2.322-1.086H4.277l-.042-.354A3.024,3.024,0,0,0,1.232,0H1.008a1.008,1.008,0,1,0,0,2.016h.224a1.008,1.008,0,0,1,1,.89L3.62,14.7a5.041,5.041,0,0,0,5.006,4.453H19.155a1.008,1.008,0,1,0,0-2.016H8.627a3.024,3.024,0,0,1-2.843-2.016H17.8a5.041,5.041,0,0,0,4.961-4.147l.791-4.389A3.018,3.018,0,0,0,22.9,4.11Z" fill="#010102"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="2.016" cy="2.016" r="2.016" transform="translate(5.041 20.163)" fill="#010102"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="2.016" cy="2.016" r="2.016" transform="translate(15.122 20.163)" fill="#010102"/>
+    </g>
+  </g>
+</svg>

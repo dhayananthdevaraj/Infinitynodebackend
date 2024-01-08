@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102" height="218" viewBox="0 0 102 218">
+  <defs>
+    <filter id="Rectangle_30" x="5" y="0" width="92" height="218" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_626" data-name="Group 626" transform="translate(-468 -159)">
+    <rect id="Rectangle_29" data-name="Rectangle 29" width="37" height="102" rx="11" transform="translate(570 188) rotate(90)" fill="#d9e4fa"/>
+    <rect id="Rectangle_28" data-name="Rectangle 28" width="37" height="102" rx="11" transform="translate(570 249) rotate(90)" fill="#d9e4fa"/>
+    <rect id="Rectangle_31" data-name="Rectangle 31" width="37" height="102" rx="11" transform="translate(570 310) rotate(90)" fill="#d9e4fa"/>
+    <g transform="matrix(1, 0, 0, 1, 468, 159)" filter="url(#Rectangle_30)">
+      <rect id="Rectangle_30-2" data-name="Rectangle 30" width="206" height="80" rx="12" transform="translate(91 6) rotate(90)" fill="#fff"/>
+    </g>
+    <g id="Rectangle_34" data-name="Rectangle 34" transform="translate(559 359) rotate(90)" fill="#5ebb48" stroke="#fff" stroke-width="1.5">
+      <path d="M0,0H0A12,12,0,0,1,12,12V68A12,12,0,0,1,0,80H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1.406.75h0a9.844,9.844,0,0,1,9.844,9.844V69.406A9.844,9.844,0,0,1,1.406,79.25h0a.656.656,0,0,1-.656-.656V1.406A.656.656,0,0,1,1.406.75Z" fill="none"/>
+    </g>
+  </g>
+</svg>

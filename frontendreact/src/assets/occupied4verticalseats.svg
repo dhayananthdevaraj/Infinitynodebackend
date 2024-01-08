@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="102" viewBox="0 0 172 102">
+  <defs>
+    <filter id="Rectangle_25" x="0" y="5" width="172" height="92" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_634" data-name="Group 634" transform="translate(-229 -218)">
+    <rect id="Rectangle_26" data-name="Rectangle 26" width="37" height="102" rx="11" transform="translate(258 218)" fill="#d9e4fa"/>
+    <rect id="Rectangle_27" data-name="Rectangle 27" width="37" height="102" rx="11" transform="translate(335 218)" fill="#d9e4fa"/>
+    <g transform="matrix(1, 0, 0, 1, 229, 218)" filter="url(#Rectangle_25)">
+      <rect id="Rectangle_25-2" data-name="Rectangle 25" width="160" height="80" rx="12" transform="translate(6 11)" fill="#fff"/>
+    </g>
+    <g id="Rectangle_33" data-name="Rectangle 33" transform="translate(383 229)" fill="#17a39d" stroke="#fff" stroke-width="1.5">
+      <path d="M0,0H0A12,12,0,0,1,12,12V68A12,12,0,0,1,0,80H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1.406.75h0a9.844,9.844,0,0,1,9.844,9.844V69.406A9.844,9.844,0,0,1,1.406,79.25h0a.656.656,0,0,1-.656-.656V1.406A.656.656,0,0,1,1.406.75Z" fill="none"/>
+    </g>
+  </g>
+</svg>

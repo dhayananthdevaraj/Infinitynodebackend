@@ -1,0 +1,95 @@
+.additem {
+	background-color: #e6aa0a;
+	color: black;
+}
+.menuitems {
+	letter-spacing: 2px;
+	font-size: 24px;
+}
+
+.cardMenu {
+	border: none;
+	box-shadow: 0px 0px 4px lightgray;
+	height: calc(104vh - 130px);
+}
+.dashboard-table {
+	overflow: hidden;
+	overflow-y: auto;
+}
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 10px;
+}
+
+.addItemButton {
+	background-color: #c69309;
+	width: 100px;
+	height: 32px;
+	color: black;
+	align-items: end;
+	font-size: 12px;
+	transition: background-color 0.4s;
+}
+
+.addItemButton:hover {
+	background-color: #c69309;
+}
+.textCentr {
+	text-align: center !important;
+}
+
+/* In your CSS file or CSS module */
+/* Style for the search input field */
+
+.search-container {
+	display: flex;
+	align-items: center;
+}
+.search-input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 10px;
+	flex: 1;
+	font-size: 16px;
+}
+
+/* Style for the search button */
+/* .search-button {
+	background-color: #0d6efd;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px; 
+	height: 40px;
+} */
+
+/* Style for the search icon */
+.search-icon {
+	color: white;
+	font-size: 18px; /* Adjust icon size as needed */
+}
+
+/* Adjust the appearance of the input and button on hover/focus if needed */
+.search-input:hover,
+.search-input:focus {
+	border-color: #0d6efd; /* Change border color on hover/focus */
+}
+
+/* .search-button:hover {
+	background-color: #0a58ca; /* Change button color on hover */
+/* } */
+
+.pagination-wrapper {
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	left: 15px;
+	padding: 10px;
+}

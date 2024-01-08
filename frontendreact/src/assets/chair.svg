@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_21" data-name="Rectangle 21" width="40" height="40" transform="translate(28 188)" fill="#236bae" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(-28 -188)" clip-path="url(#clip-path)">
+    <g id="dinner-table" transform="translate(28 188)">
+      <path id="Path_8" data-name="Path 8" d="M4.058,20.8C3.369,13.6,2.324,7.67,2.309,7.581L0,7.982A170.243,170.243,0,0,1,2.344,32.391H4.688c0-2.286-.1-4.675-.258-7.031H11.8v7.031h2.344V23.016c0-2.144-1.414-2.344-3.534-2.344H6.033a10.491,10.491,0,0,0-1.975.129Z" fill="#236bae"/>
+      <path id="Path_9" data-name="Path 9" d="M18.828,30.047H16.484v2.344h7.031V30.047H21.172V15.985h9.375V11.3H9.453v4.688h9.375Z" fill="#236bae"/>
+      <path id="Path_10" data-name="Path 10" d="M40,7.982l-2.309-.4c-.015.089-1.06,6.017-1.749,13.221a10.489,10.489,0,0,0-1.975-.129H29.393c-2.12,0-3.534.2-3.534,2.344v9.375H28.2V25.359H35.57c-.156,2.357-.258,4.746-.258,7.032h2.344A170.243,170.243,0,0,1,40,7.982Z" fill="#236bae"/>
+    </g>
+  </g>
+</svg>

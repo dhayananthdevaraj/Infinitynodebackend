@@ -1,0 +1,13 @@
+.rating {
+    font-size: 30px;
+  }
+  
+  .star {
+    cursor: pointer;
+    color: #ccc;
+  }
+  
+  .star.filled {
+    color: #f1c40f; /* Change the color for filled stars */
+  }
+  
