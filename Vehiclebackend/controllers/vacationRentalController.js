@@ -57,6 +57,8 @@ const updateVacationRental = async (req, res) => {
 const deleteVacationRental = async (req, res) => {
   try {
     const { id } = req.params;
+
+    console.log("Id",id);
     const vacationRental = await VacationRental.findByIdAndDelete(id);
 
     if (!vacationRental) {
