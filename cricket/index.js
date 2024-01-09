@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const userRouter = require("./routers/userRouter");
-const vacationRentalRouter = require("./routers/vactionRentalRouter");
+const cricket = require("./routers/cricketTournamentRouter");
 const app = express();
 const cors = require("cors");
 
@@ -29,4 +29,4 @@ mongoose
   });
 
 app.use("/user", userRouter);
-app.use("/vacation", vacationRentalRouter);
+app.use("/cricket",cricket );
