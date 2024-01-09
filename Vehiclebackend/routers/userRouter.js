@@ -4,7 +4,7 @@ const { validateToken } = require('../authUtils');
 const router = express.Router();
 
 router.post('/login', userController.getUserByUsernameAndPassword);
-router.post('/sigsnup', userController.addUser);
+router.post('/signup', userController.addUser);
 router.get('/getAllUsers',userController.getAllUsers);
 
 module.exports = router;
