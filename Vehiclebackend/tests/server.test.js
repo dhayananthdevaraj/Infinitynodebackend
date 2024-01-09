@@ -874,17 +874,17 @@
 //   });
 // });
 
-const https = require('https');
+const http = require('http');
 
-const serverURL = 'https://8080-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io'; // Replace with your actual server URL
-const endpointPath = '/user/login'; // Replace with your actual endpoint path
+const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
+const endpointPath = '/user/signup'; // Replace with your actual endpoint path
 
 test('Check Endpoint Existence', (done) => {
   const options = {
     method: 'POST', // Use HEAD request to check only the existence of the endpoint
   };
 
-  const req = https.request(`${serverURL}${endpointPath}`, options, (res) => {
+  const req = http.request(`${serverURL}${endpointPath}`, options, (res) => {
     try {
       expect(res.statusCode).toBe(200);
       console.log('Endpoint exists!');
@@ -900,3 +900,45 @@ test('Check Endpoint Existence', (done) => {
 
   req.end();
 });
+
+
+
+
+
+
+
+// const http = require('http');
+
+// const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
+
+// const endpoints = [
+//   { path: '/user/login', method: 'POST' },
+//   { path: '/user/signup', method: 'GET' },
+//   { path: '/user/getAllUsers', method: 'GET' },
+//   // Add more endpoints as needed
+// ];
+
+// // Construct a loop to check multiple endpoints
+// endpoints.forEach(({ path, method }) => {
+//   test(`Check ${method} Endpoint Existence for ${path}`, (done) => {
+//     const options = {
+//       method,
+//     };
+
+//     const req = http.request(`${serverURL}${path}`, options, (res) => {
+//       try {
+//         expect(res.statusCode).toBe(200);
+//         console.log(`${method} ${path} exists!`);
+//         done();
+//       } catch (error) {
+//         done(`Endpoint ${method} ${path} does not exist. Error: ${error.message}`);
+//       }
+//     });
+
+//     req.on('error', (error) => {
+//       done(`Error making request: ${error.message}`);
+//     });
+
+//     req.end();
+//   });
+// });
