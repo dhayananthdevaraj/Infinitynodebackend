@@ -1139,7 +1139,7 @@ const validRequestBody = JSON.stringify({
 
 
 const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
-const endpointPath = '/user/getAllUsers'; // Replace with your actual endpoint path
+const endpointPath = '/user/getAllUssers'; // Replace with your actual endpoint path
 
 // const validRequestBody = JSON.stringify({
 //   // Your valid request body data here
