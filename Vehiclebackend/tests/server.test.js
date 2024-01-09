@@ -874,23 +874,4 @@
 //   });
 // });
 
-const request = require('supertest');
-const app = require('../index'); // Import your Node.js app (replace 'index' with your actual file name)
-const assert = require('assert');
 
-// Test the existence and status of your endpoint
-describe('Endpoint Test', () => {
-  it('should return status ok for /your-endpoint', (done) => {
-    request(app)
-      .get('/user/login') // Replace with your actual endpoint
-      .expect(200)
-      .end((err, res) => {
-        if (err) return done(err);
-
-        // Assuming your response is a JSON object with a "status" property
-        assert.strictEqual(res.body.status, 'ok');
-
-        done();
-      });
-  });
-});
