@@ -874,4 +874,29 @@
 //   });
 // });
 
+const https = require('https');
 
+const serverURL = 'https://8080-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io'; // Replace with your actual server URL
+const endpointPath = '/user/login'; // Replace with your actual endpoint path
+
+test('Check Endpoint Existence', (done) => {
+  const options = {
+    method: 'POST', // Use HEAD request to check only the existence of the endpoint
+  };
+
+  const req = https.request(`${serverURL}${endpointPath}`, options, (res) => {
+    try {
+      expect(res.statusCode).toBe(200);
+      console.log('Endpoint exists!');
+      done();
+    } catch (error) {
+      done(`Endpoint does not exist. Error: ${error.message}`);
+    }
+  });
+
+  req.on('error', (error) => {
+    done(`Error making request: ${error.message}`);
+  });
+
+  req.end();
+});
