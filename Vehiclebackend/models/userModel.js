@@ -14,13 +14,7 @@ const userSchema = new mongoose.Schema({
   mobileNumber: {
     type: String,
     required: true,
-    validate: {
-      validator: function(value) {
-        // Basic mobile number validation (example: 1234567890)
-        return /^\d{10}$/.test(value);
-      },
-      message: props => `${props.value} is not a valid mobile number!`,
-    },
+ 
   },
   email: {
     type: String,
@@ -28,13 +22,7 @@ const userSchema = new mongoose.Schema({
     unique: true,
     trim: true,
     lowercase: true, // Convert to lowercase
-    validate: {
-      validator: function(value) {
-        // Basic email validation
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-      },
-      message: props => `${props.value} is not a valid email address!`,
-    },  
+ 
   },
   role: {
     type: String,

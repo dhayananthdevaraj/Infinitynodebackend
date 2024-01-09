@@ -874,34 +874,89 @@
 //   });
 // });
 
-const http = require('http');
+// const http = require('http');
 
-const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
-const endpointPath = '/user/signup'; // Replace with your actual endpoint path
+// const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
+// const endpointPath = '/user/signup'; // Replace with your actual endpoint path
 
-test('Check Endpoint Existence', (done) => {
-  const options = {
-    method: 'POST', // Use HEAD request to check only the existence of the endpoint
-  };
+// test('Check Endpoint Existence', (done) => {
+//   const options = {
+//     method: 'POST', // Use HEAD request to check only the existence of the endpoint
+//   };
 
-  const req = http.request(`${serverURL}${endpointPath}`, options, (res) => {
-    try {
-      expect(res.statusCode).toBe(200);
-      console.log('Endpoint exists!');
-      done();
-    } catch (error) {
-      done(`Endpoint does not exist. Error: ${error.message}`);
-    }
-  });
+//   const req = http.request(`${serverURL}${endpointPath}`, options, (res) => {
+//     try {
+//       expect(res.statusCode).toBe(200);
+//       console.log('Endpoint exists!');
+//       done();
+//     } catch (error) {
+//       done(`Endpoint does not exist. Error: ${error.message}`);
+//     }
+//   });
 
-  req.on('error', (error) => {
-    done(`Error making request: ${error.message}`);
-  });
+//   req.on('error', (error) => {
+//     done(`Error making request: ${error.message}`);
+//   });
 
-  req.end();
-});
+//   req.end();
+// });
 
 
+// const http = require('http');
+
+// const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
+// const endpointPath = '/user/signup'; // Replace with your actual endpoint path
+// const generateUniqueEmail = () => {
+//   const timestamp = new Date().getTime();
+//   return `user_${timestamp}@example.com`;
+// };
+
+// const uniqueEmail = generateUniqueEmail();
+// const requestBody = JSON.stringify({
+//   // Your request body data here
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   mobileNumber: '1234567890',
+//   email: uniqueEmail,
+//   role: 'user',
+//   password: 'securepassword',
+// });
+
+// const options = {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json',
+//     'Content-Length': Buffer.byteLength(requestBody),
+//   },
+// };
+
+// const req = http.request(`${serverURL}${endpointPath}`, options, (res) => {
+//   let data = '';
+
+//   res.on('data', (chunk) => {
+//     data += chunk;
+//   });
+
+//   res.on('end', () => {
+//     try {
+//       expect(res.statusCode).toBe(200);
+//       console.log('Endpoint exists!');
+//       console.log('Response body:', data);
+//     } catch (error) {
+//       console.error(`Endpoint does not exist. Error: ${error.message}`);
+//     }
+//   });
+// });
+
+// req.on('error', (error) => {
+//   console.error(`Error making request: ${error.message}`);
+// });
+
+// // Send the request body
+// req.write(requestBody);
+
+// // Complete the request
+// req.end();
 
 
 
@@ -942,3 +997,58 @@ test('Check Endpoint Existence', (done) => {
 //     req.end();
 //   });
 // });
+const http = require('http');
+
+const serverURL = 'http://localhost:8080'; // Replace with your actual server URL
+const endpointPath = '/user/login'; // Replace with your actual endpoint path
+
+// Function to generate a unique email using a timestamp
+const generateUniqueEmail = () => {
+  const timestamp = new Date().getTime();
+  return `user_${timestamp}@example.com`;
+};
+
+test('Check Endpoint Existence', (done) => {
+  const options = {
+    method: 'POST', // Use HEAD request to check only the existence of the endpoint
+  };
+
+  const req = http.request(`${serverURL}${endpointPath}`, options, (res) => {
+    try {
+      expect(res.statusCode).toBe(200);
+      console.log('Endpoint exists!');
+      done();
+    } catch (error) {
+      done(`Endpoint does not exist. Error: ${error.message}`);
+    }
+  });
+
+  req.on('error', (error) => {
+    done(`Error making request: ${error.message}`);
+  });
+
+  req.end();
+});
+
+
+test('Check Endpoint Existence', (done) => {
+  const options = {
+    method: 'POST', // Use HEAD request to check only the existence of the endpoint
+  };
+
+  const req = http.request(`${serverURL}${endpointPath}`, options, (res) => {
+    try {
+      expect(res.statusCode).toBe(200);
+      console.log('Endpoint exists!');
+      done();
+    } catch (error) {
+      done(`Endpoint does not exist. Error: ${error.message}`);
+    }
+  });
+
+  req.on('error', (error) => {
+    done(`Error making request: ${error.message}`);
+  });
+
+  req.end();
+});
