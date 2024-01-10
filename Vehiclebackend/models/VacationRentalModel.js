@@ -21,7 +21,7 @@ const vacationRentalSchema = new mongoose.Schema({
     enum: ['House', 'Apartment', 'Villa', 'Cabin', 'Condo', 'Other'],
     required: true
   },
-  bedrooms: {
+  noOfBedroom: {
     type: Number,
     required: true
   },

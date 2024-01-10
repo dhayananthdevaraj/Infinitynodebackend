@@ -12,11 +12,16 @@ const getUserByUsernameAndPassword = async (req, res) => {
     };
     const token = generateToken(user._id)
     console.log("token",token);
-    
+    let responseObj={
+      "username":user.firstName+" "+user.lastName,
+      "role":user.role,
+      "token":token,
+      "userId":user._id
+    }
 
-    res.status(200).json({"userInformation":user,"token":token});
+    res.status(200).json(responseObj);
   } catch (error) {
-console.log("error",error);
+   console.log("error",error);
     res.status(500).json({ message: error.message });
   }
 };
