@@ -81,7 +81,7 @@ const getVacationRentalsByOwnerId = async (req, res) => {
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
     console.log("sortValue",sortValue);
     const vacationRentals = await VacationRental.find({ ownerId: ownerId, title: searchRegex }).select('-_id -__v').sort({ pricePerDay: parseInt(sortValue) });
-// console.log("vacationRentals",vacationRentals);
+console.log("vacationRentals",vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
