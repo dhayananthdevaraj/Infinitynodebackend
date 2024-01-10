@@ -3,7 +3,7 @@
 const mongoose = require('mongoose'); // Example for MongoDB with Mongoose
 
 const vacationRentalSchema = new mongoose.Schema({
-  owner: {
+  ownerId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User', // Reference to the User model for the property owner
     required: true
