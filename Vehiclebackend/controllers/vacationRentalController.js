@@ -2,19 +2,22 @@ const VacationRental = require('../models/VacationRentalModel');
 
 const getAllVacationRentals = async (req, res) => {
   try {
-    const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
-    const search = req.body.searchValue || ''; // Default to empty string if not provided
+    const sortValue = req.query.sortValue || 1; // Default to ascending order if not provided
+    const search = req.query.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
-console.log("sortValue",sortValue);
-    const vacationRentals = await VacationRental.find({ title: searchRegex }).select('-_id -__v')
-    .sort({ pricePerDay: parseInt(sortValue) });
 
-// console.log("vacationRentals",valcationRentals);
+    console.log("sortValue", sortValue);
+
+    const vacationRentals = await VacationRental.find({ title: searchRegex }).select('-_id -__v')
+      .sort({ pricePerDay: parseInt(sortValue) });
+
+    // console.log("vacationRentals", vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 const getVacationRentalById = async (req, res) => {
   try {
@@ -74,19 +77,23 @@ const deleteVacationRental = async (req, res) => {
 };
 const getVacationRentalsByOwnerId = async (req, res) => {
   try {
-    const ownerId  = req.body.ownerId;
-    console.log("Own",ownerId);
-    const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
-    const search = req.body.searchValue || ''; // Default to empty string if not provided
+    const {ownerId} = req.params;
+    console.log("Own", ownerId);
+    const sortValue = req.query.sortValue || 1; // Default to ascending order if not provided
+    const search = req.query.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
-    console.log("sortValue",sortValue);
-    const vacationRentals = await VacationRental.find({ ownerId: ownerId, title: searchRegex }).select('-_id -__v').sort({ pricePerDay: parseInt(sortValue) });
-console.log("vacationRentals",vacationRentals);
+    console.log("sortValue", sortValue);
+
+    const vacationRentals = await VacationRental.find({ ownerId: ownerId, title: searchRegex }).select('-_id -__v')
+      .sort({ pricePerDay: parseInt(sortValue) });
+
+    console.log("vacationRentals", vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
 module.exports = {
   getAllVacationRentals,
   getVacationRentalById,
