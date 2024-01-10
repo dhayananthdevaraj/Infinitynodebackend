@@ -28,5 +28,5 @@ mongoose
     console.log(error);
   });
 
-app.use("/user", userRouter);
-app.use("/vacation", vacationRentalRouter);
+app.use("/api/auth", userRouter);
+app.use("/api", vacationRentalRouter);

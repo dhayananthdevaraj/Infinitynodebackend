@@ -25,10 +25,6 @@ const vacationRentalSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  bathrooms: {
-    type: Number,
-    required: true
-  },
   amenities: {
     type: [String] // An array of strings representing amenities
   },
@@ -41,7 +37,10 @@ const vacationRentalSchema = new mongoose.Schema({
     required: true
   },
   photo: {
-    type: [String] // An array of strings representing photo URLs
+    type: String,
+    required: true
+
+     // An array of strings representing photo URLs
   },
 
 });
