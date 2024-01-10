@@ -6,7 +6,8 @@ const getAllVacationRentals = async (req, res) => {
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
 console.log("sortValue",sortValue);
-    const vacationRentals = await VacationRental.find({ title: searchRegex },"-__v").sort({ pricePerDay: parseInt(sortValue) });
+    const vacationRentals = await VacationRental.find({ title: searchRegex }).select('-_id -__v')
+    .sort({ pricePerDay: parseInt(sortValue) });
 
 // console.log("vacationRentals",valcationRentals);
     res.status(200).json(vacationRentals);
@@ -41,8 +42,8 @@ const addVacationRental = async (req, res) => {
 
 const updateVacationRental = async (req, res) => {
   try {
-    const { id } = req.params;
-    const vacationRental = await VacationRental.findByIdAndUpdate(id, req.body, { new: true });
+    const { vacationId } = req.params;
+    const vacationRental = await VacationRental.findOneAndUpdate({vacationId}, req.body, { new: true });
 
     if (!vacationRental) {
       res.status(404).json({ message: 'Cannot find any vacation rental' });

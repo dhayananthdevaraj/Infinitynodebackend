@@ -16,7 +16,7 @@ const getUserByUsernameAndPassword = async (req, res) => {
       "username":user.firstName+" "+user.lastName,
       "role":user.role,
       "token":token,
-      "userId":user._id
+      "userId":user.userId
     }
 
     res.status(200).json(responseObj);
