@@ -18,8 +18,8 @@ console.log("sortValue",sortValue);
 
 const getVacationRentalById = async (req, res) => {
   try {
-    const { id } = req.params;
-    const vacationRental = await VacationRental.findById(id,"-__v");
+    const { vacationId } = req.params;
+    const vacationRental = await VacationRental.findOne({vacationId}).select('-_id -__v');
 
     if (!vacationRental) {
       res.status(404).json({ message: 'Cannot find any vacation rental' });
@@ -57,10 +57,10 @@ const updateVacationRental = async (req, res) => {
 
 const deleteVacationRental = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { vacationId } = req.params;
 
-    console.log("Id",id);
-    const vacationRental = await VacationRental.findByIdAndDelete(id);
+    console.log("Id",vacationId);
+    const vacationRental = await VacationRental.findOneAndDelete({vacationId});
 
     if (!vacationRental) {
       res.status(404).json({ message: 'Cannot find any vacation rental' });
@@ -79,7 +79,7 @@ const getVacationRentalsByOwnerId = async (req, res) => {
     const search = req.body.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
     console.log("sortValue",sortValue);
-    const vacationRentals = await VacationRental.find({ owner: ownerId, title: searchRegex },"-__v").sort({ pricePerDay: parseInt(sortValue) });
+    const vacationRentals = await VacationRental.find({ ownerId: ownerId, title: searchRegex }).select('-_id -__v').sort({ pricePerDay: parseInt(sortValue) });
 // console.log("vacationRentals",vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
