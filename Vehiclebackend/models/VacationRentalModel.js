@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const vacationRentalSchema = new mongoose.Schema({
-  ownerId: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true,
