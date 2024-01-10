@@ -47,3 +47,6 @@ const vacationRentalSchema = new mongoose.Schema({
 const VacationRental = mongoose.model('VacationRental', vacationRentalSchema);
 
 module.exports = VacationRental;
+
+
+// https://github.com/dhayananthdevaraj/Infinitynodebackend.git
